@@ -3825,7 +3825,8 @@
         "x": -88,
         "y": 14,
         "country": [
-            "Honduras"
+            "Honduras",
+            "El Salvador"
         ]
     },
     {
@@ -9222,7 +9223,8 @@
         "x": -16,
         "y": 14,
         "country": [
-            "Senegal"
+            "Senegal",
+            "Gambia"
         ]
     },
     {
@@ -10069,7 +10071,8 @@
         "x": 0,
         "y": 8,
         "country": [
-            "Ghana"
+            "Ghana",
+            "Togo"
         ]
     },
     {
@@ -10314,7 +10317,8 @@
         "x": 2,
         "y": 42,
         "country": [
-            "Spain"
+            "Spain",
+            "Andorra"
         ]
     },
     {
@@ -10482,7 +10486,8 @@
         "x": 4,
         "y": 50,
         "country": [
-            "France"
+            "France",
+            "Belgium"
         ]
     },
     {
@@ -10762,14 +10767,16 @@
         "x": 8,
         "y": 44,
         "country": [
-            "Italy"
+            "Italy",
+            "Monaco"
         ]
     },
     {
         "x": 8,
         "y": 46,
         "country": [
-            "Italy"
+            "Italy",
+            "Switzerland"
         ]
     },
     {
@@ -10958,7 +10965,8 @@
         "x": 10,
         "y": 48,
         "country": [
-            "Germany"
+            "Germany",
+            "Liechtenstein"
         ]
     },
     {
@@ -11161,14 +11169,16 @@
         "x": 12,
         "y": 42,
         "country": [
-            "Italy"
+            "Italy",
+            "Vatican"
         ]
     },
     {
         "x": 12,
         "y": 44,
         "country": [
-            "Italy"
+            "Italy",
+            "San Marino"
         ]
     },
     {
@@ -12386,7 +12396,9 @@
         "x": 20,
         "y": 42,
         "country": [
-            "Albania"
+            "Albania",
+            "Kosovo",
+            "Montenegro"
         ]
     },
     {
@@ -14878,7 +14890,8 @@
         "x": 36,
         "y": 32,
         "country": [
-            "Jordan"
+            "Jordan",
+            "Israel"
         ]
     },
     {
@@ -15515,7 +15528,8 @@
         "x": 42,
         "y": 12,
         "country": [
-            "Ethiopia"
+            "Ethiopia",
+            "Djibouti"
         ]
     },
     {
@@ -16089,7 +16103,8 @@
         "x": 46,
         "y": 40,
         "country": [
-            "Azerbaijan"
+            "Azerbaijan",
+            "Armenia"
         ]
     },
     {
@@ -18910,7 +18925,8 @@
         "x": 78,
         "y": 36,
         "country": [
-            "China"
+            "China",
+            "Kashmir"
         ]
     },
     {
@@ -21570,7 +21586,8 @@
         "x": 104,
         "y": 2,
         "country": [
-            "Malaysia"
+            "Malaysia",
+            "Singapore"
         ]
     },
     {
@@ -22746,7 +22763,8 @@
         "x": 114,
         "y": 4,
         "country": [
-            "Malaysia"
+            "Malaysia",
+            "Brunei"
         ]
     },
     {
@@ -22998,7 +23016,8 @@
         "x": 116,
         "y": 4,
         "country": [
-            "Indonesia"
+            "Indonesia",
+            "Brunei"
         ]
     },
     {
@@ -23866,7 +23885,8 @@
         "x": 124,
         "y": -10,
         "country": [
-            "Indonesia"
+            "Indonesia",
+            "East Timor"
         ]
     },
     {
@@ -26786,6 +26806,1007 @@
         "y": 68,
         "country": [
             "Russia"
+        ]
+    },
+    {
+        "x": -62,
+        "y": 18,
+        "country": [
+            "Antigua and Barbuda",
+            "Saint Kitts and Nevis"
+        ]
+    },
+    {
+        "x": 50,
+        "y": 26,
+        "country": [
+            "Bahrain"
+        ]
+    },
+    {
+        "x": -74,
+        "y": 22,
+        "country": [
+            "The Bahamas"
+        ]
+    },
+    {
+        "x": -76,
+        "y": 22,
+        "country": [
+            "The Bahamas"
+        ]
+    },
+    {
+        "x": -72,
+        "y": 22,
+        "country": [
+            "The Bahamas"
+        ]
+    },
+    {
+        "x": -74,
+        "y": 24,
+        "country": [
+            "The Bahamas"
+        ]
+    },
+    {
+        "x": -76,
+        "y": 24,
+        "country": [
+            "The Bahamas"
+        ]
+    },
+    {
+        "x": -80,
+        "y": 24,
+        "country": [
+            "The Bahamas"
+        ]
+    },
+    {
+        "x": -78,
+        "y": 24,
+        "country": [
+            "The Bahamas"
+        ]
+    },
+    {
+        "x": -78,
+        "y": 26,
+        "country": [
+            "The Bahamas"
+        ]
+    },
+    {
+        "x": -80,
+        "y": 26,
+        "country": [
+            "The Bahamas"
+        ]
+    },
+    {
+        "x": -76,
+        "y": 26,
+        "country": [
+            "The Bahamas"
+        ]
+    },
+    {
+        "x": -80,
+        "y": 16,
+        "country": [
+            "Bajo Nuevo Bank (Petrel Is.)"
+        ]
+    },
+    {
+        "x": -88,
+        "y": 18,
+        "country": [
+            "Belize"
+        ]
+    },
+    {
+        "x": -60,
+        "y": 14,
+        "country": [
+            "Barbados",
+            "Saint Lucia"
+        ]
+    },
+    {
+        "x": 34,
+        "y": 36,
+        "country": [
+            "Cyprus No Mans Area",
+            "Northern Cyprus",
+            "Cyprus"
+        ]
+    },
+    {
+        "x": 32,
+        "y": 36,
+        "country": [
+            "Cyprus No Mans Area",
+            "Northern Cyprus"
+        ]
+    },
+    {
+        "x": 44,
+        "y": -12,
+        "country": [
+            "Comoros"
+        ]
+    },
+    {
+        "x": -24,
+        "y": 14,
+        "country": [
+            "Cabo Verde"
+        ]
+    },
+    {
+        "x": -24,
+        "y": 16,
+        "country": [
+            "Cabo Verde"
+        ]
+    },
+    {
+        "x": -22,
+        "y": 16,
+        "country": [
+            "Cabo Verde"
+        ]
+    },
+    {
+        "x": -26,
+        "y": 18,
+        "country": [
+            "Cabo Verde"
+        ]
+    },
+    {
+        "x": 34,
+        "y": 34,
+        "country": [
+            "Cyprus"
+        ]
+    },
+    {
+        "x": -62,
+        "y": 16,
+        "country": [
+            "Dominica"
+        ]
+    },
+    {
+        "x": -72,
+        "y": 18,
+        "country": [
+            "Dominican Republic",
+            "Haiti"
+        ]
+    },
+    {
+        "x": -68,
+        "y": 18,
+        "country": [
+            "Dominican Republic"
+        ]
+    },
+    {
+        "x": -70,
+        "y": 18,
+        "country": [
+            "Dominican Republic"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 0,
+        "country": [
+            "Federated States of Micronesia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 4,
+        "country": [
+            "Federated States of Micronesia"
+        ]
+    },
+    {
+        "x": 154,
+        "y": 6,
+        "country": [
+            "Federated States of Micronesia"
+        ]
+    },
+    {
+        "x": 162,
+        "y": 6,
+        "country": [
+            "Federated States of Micronesia"
+        ]
+    },
+    {
+        "x": 158,
+        "y": 6,
+        "country": [
+            "Federated States of Micronesia"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 6,
+        "country": [
+            "Federated States of Micronesia"
+        ]
+    },
+    {
+        "x": 152,
+        "y": 8,
+        "country": [
+            "Federated States of Micronesia"
+        ]
+    },
+    {
+        "x": 150,
+        "y": 8,
+        "country": [
+            "Federated States of Micronesia"
+        ]
+    },
+    {
+        "x": 138,
+        "y": 10,
+        "country": [
+            "Federated States of Micronesia"
+        ]
+    },
+    {
+        "x": 140,
+        "y": 10,
+        "country": [
+            "Federated States of Micronesia"
+        ]
+    },
+    {
+        "x": -62,
+        "y": 12,
+        "country": [
+            "Grenada",
+            "Saint Vincent and the Grenadines"
+        ]
+    },
+    {
+        "x": -74,
+        "y": 18,
+        "country": [
+            "Haiti"
+        ]
+    },
+    {
+        "x": -72,
+        "y": 20,
+        "country": [
+            "Haiti"
+        ]
+    },
+    {
+        "x": -78,
+        "y": 18,
+        "country": [
+            "Jamaica"
+        ]
+    },
+    {
+        "x": -152,
+        "y": -12,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": -156,
+        "y": -6,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": -174,
+        "y": -4,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": -172,
+        "y": -4,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": -154,
+        "y": -4,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": -172,
+        "y": -2,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": 176,
+        "y": -2,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": 174,
+        "y": -2,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 0,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 0,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 0,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": 174,
+        "y": 2,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 2,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": -158,
+        "y": 2,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 4,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": -160,
+        "y": 4,
+        "country": [
+            "Kiribati"
+        ]
+    },
+    {
+        "x": 48,
+        "y": 30,
+        "country": [
+            "Kuwait"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 0,
+        "country": [
+            "Maldives"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 0,
+        "country": [
+            "Maldives"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 2,
+        "country": [
+            "Maldives"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 2,
+        "country": [
+            "Maldives"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 4,
+        "country": [
+            "Maldives"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 4,
+        "country": [
+            "Maldives"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 6,
+        "country": [
+            "Maldives"
+        ]
+    },
+    {
+        "x": 74,
+        "y": 6,
+        "country": [
+            "Maldives"
+        ]
+    },
+    {
+        "x": 72,
+        "y": 8,
+        "country": [
+            "Maldives"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 4,
+        "country": [
+            "Marshall Islands"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 6,
+        "country": [
+            "Marshall Islands"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 6,
+        "country": [
+            "Marshall Islands"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 6,
+        "country": [
+            "Marshall Islands"
+        ]
+    },
+    {
+        "x": 172,
+        "y": 8,
+        "country": [
+            "Marshall Islands"
+        ]
+    },
+    {
+        "x": 168,
+        "y": 8,
+        "country": [
+            "Marshall Islands"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 8,
+        "country": [
+            "Marshall Islands"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 10,
+        "country": [
+            "Marshall Islands"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 12,
+        "country": [
+            "Marshall Islands"
+        ]
+    },
+    {
+        "x": 170,
+        "y": 14,
+        "country": [
+            "Marshall Islands"
+        ]
+    },
+    {
+        "x": 14,
+        "y": 36,
+        "country": [
+            "Malta"
+        ]
+    },
+    {
+        "x": 58,
+        "y": -20,
+        "country": [
+            "Mauritius"
+        ]
+    },
+    {
+        "x": 64,
+        "y": -20,
+        "country": [
+            "Mauritius"
+        ]
+    },
+    {
+        "x": 56,
+        "y": -10,
+        "country": [
+            "Mauritius"
+        ]
+    },
+    {
+        "x": 166,
+        "y": 0,
+        "country": [
+            "Nauru"
+        ]
+    },
+    {
+        "x": 114,
+        "y": 10,
+        "country": [
+            "Spratly Islands"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 10,
+        "country": [
+            "Spratly Islands"
+        ]
+    },
+    {
+        "x": 114,
+        "y": 12,
+        "country": [
+            "Spratly Islands"
+        ]
+    },
+    {
+        "x": 116,
+        "y": 12,
+        "country": [
+            "Spratly Islands"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 2,
+        "country": [
+            "Palau"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 4,
+        "country": [
+            "Palau"
+        ]
+    },
+    {
+        "x": 132,
+        "y": 6,
+        "country": [
+            "Palau"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 6,
+        "country": [
+            "Palau"
+        ]
+    },
+    {
+        "x": 134,
+        "y": 8,
+        "country": [
+            "Palau"
+        ]
+    },
+    {
+        "x": 34,
+        "y": 32,
+        "country": [
+            "Israel"
+        ]
+    },
+    {
+        "x": 52,
+        "y": 26,
+        "country": [
+            "Qatar"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 16,
+        "country": [
+            "Scarborough Reef"
+        ]
+    },
+    {
+        "x": -78,
+        "y": 16,
+        "country": [
+            "Serranilla Bank"
+        ]
+    },
+    {
+        "x": 168,
+        "y": -12,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 166,
+        "y": -12,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 160,
+        "y": -12,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 166,
+        "y": -10,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 162,
+        "y": -10,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 168,
+        "y": -10,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 160,
+        "y": -10,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 160,
+        "y": -8,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 158,
+        "y": -8,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 162,
+        "y": -8,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 156,
+        "y": -8,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 156,
+        "y": -6,
+        "country": [
+            "Solomon Islands"
+        ]
+    },
+    {
+        "x": 6,
+        "y": 0,
+        "country": [
+            "Sao Tome and Principe"
+        ]
+    },
+    {
+        "x": 8,
+        "y": 2,
+        "country": [
+            "Sao Tome and Principe"
+        ]
+    },
+    {
+        "x": 46,
+        "y": -10,
+        "country": [
+            "Seychelles"
+        ]
+    },
+    {
+        "x": 48,
+        "y": -10,
+        "country": [
+            "Seychelles"
+        ]
+    },
+    {
+        "x": 56,
+        "y": -8,
+        "country": [
+            "Seychelles"
+        ]
+    },
+    {
+        "x": 52,
+        "y": -6,
+        "country": [
+            "Seychelles"
+        ]
+    },
+    {
+        "x": 56,
+        "y": -6,
+        "country": [
+            "Seychelles"
+        ]
+    },
+    {
+        "x": 54,
+        "y": -6,
+        "country": [
+            "Seychelles"
+        ]
+    },
+    {
+        "x": 56,
+        "y": -4,
+        "country": [
+            "Seychelles"
+        ]
+    },
+    {
+        "x": 126,
+        "y": -8,
+        "country": [
+            "East Timor"
+        ]
+    },
+    {
+        "x": -176,
+        "y": -22,
+        "country": [
+            "Tonga"
+        ]
+    },
+    {
+        "x": -174,
+        "y": -22,
+        "country": [
+            "Tonga"
+        ]
+    },
+    {
+        "x": -174,
+        "y": -20,
+        "country": [
+            "Tonga"
+        ]
+    },
+    {
+        "x": -176,
+        "y": -20,
+        "country": [
+            "Tonga"
+        ]
+    },
+    {
+        "x": -174,
+        "y": -18,
+        "country": [
+            "Tonga"
+        ]
+    },
+    {
+        "x": -176,
+        "y": -16,
+        "country": [
+            "Tonga"
+        ]
+    },
+    {
+        "x": -62,
+        "y": 10,
+        "country": [
+            "Trinidad and Tobago"
+        ]
+    },
+    {
+        "x": -60,
+        "y": 12,
+        "country": [
+            "Trinidad and Tobago"
+        ]
+    },
+    {
+        "x": 180,
+        "y": -10,
+        "country": [
+            "Tuvalu"
+        ]
+    },
+    {
+        "x": 180,
+        "y": -8,
+        "country": [
+            "Tuvalu"
+        ]
+    },
+    {
+        "x": 178,
+        "y": -8,
+        "country": [
+            "Tuvalu"
+        ]
+    },
+    {
+        "x": 176,
+        "y": -6,
+        "country": [
+            "Tuvalu"
+        ]
+    },
+    {
+        "x": 178,
+        "y": -6,
+        "country": [
+            "Tuvalu"
+        ]
+    },
+    {
+        "x": 122,
+        "y": 22,
+        "country": [
+            "Taiwan"
+        ]
+    },
+    {
+        "x": 120,
+        "y": 24,
+        "country": [
+            "Taiwan"
+        ]
+    },
+    {
+        "x": 118,
+        "y": 24,
+        "country": [
+            "Taiwan"
+        ]
+    },
+    {
+        "x": -62,
+        "y": 14,
+        "country": [
+            "Saint Vincent and the Grenadines"
+        ]
+    },
+    {
+        "x": 170,
+        "y": -20,
+        "country": [
+            "Vanuatu"
+        ]
+    },
+    {
+        "x": 170,
+        "y": -18,
+        "country": [
+            "Vanuatu"
+        ]
+    },
+    {
+        "x": 168,
+        "y": -18,
+        "country": [
+            "Vanuatu"
+        ]
+    },
+    {
+        "x": 168,
+        "y": -16,
+        "country": [
+            "Vanuatu"
+        ]
+    },
+    {
+        "x": 168,
+        "y": -14,
+        "country": [
+            "Vanuatu"
+        ]
+    },
+    {
+        "x": 166,
+        "y": -16,
+        "country": [
+            "Vanuatu"
+        ]
+    },
+    {
+        "x": 166,
+        "y": -14,
+        "country": [
+            "Vanuatu"
+        ]
+    },
+    {
+        "x": -172,
+        "y": -14,
+        "country": [
+            "Samoa"
         ]
     }
 ]
