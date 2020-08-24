@@ -1,10 +1,11 @@
 {
   "name": "dotmap",
   "version": "1.0.0",
-  "description": "",
+  "description": "Dot map",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "tsc --watch",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,12 @@
   },
   "homepage": "https://github.com/zhangshine/DotMap#readme",
   "devDependencies": {
+    "@types/node": "^14.6.0",
     "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.16",
+    "geojson-geometries-lookup": "^0.5.0",
+    "svgdom": "^0.1.8"
   }
 }
