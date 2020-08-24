@@ -38,7 +38,7 @@ for(let x=-180; x<180; x++) {
 const svgContent1x1 = draw1x1.svg();
 
 fs.writeFileSync('../data/ne_10m_admin_0_countries_1_1x1.svg', svgContent1x1);
-fs.writeFileSync('../data/ne_10m_admin_0_countries_1_1x1.json', JSON.stringify(result1v1Point));
+fs.writeFileSync('../data/ne_10m_admin_0_countries_1_1x1.json', JSON.stringify(result1v1Point, null, 4));
 
 const draw1x4 = SVG().size(360, 150);
 
@@ -61,4 +61,4 @@ for(let x=-180; x<180; x+=2) {
 const svgContent1x4 = draw1x4.svg();
 
 fs.writeFileSync('../data/ne_10m_admin_0_countries_1_2x2.svg', svgContent1x4);
-fs.writeFileSync('../data/ne_10m_admin_0_countries_1_2x2.json', JSON.stringify(result1v4Point));
+fs.writeFileSync('../data/ne_10m_admin_0_countries_1_2x2.json', JSON.stringify(result1v4Point, null, 4));
