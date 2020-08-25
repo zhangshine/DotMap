@@ -6,6 +6,7 @@ import {createSVGWindow} from "svgdom";
 import {registerWindow, SVG} from '@svgdotjs/svg.js'
 
 import fs from "fs";
+import {Location} from "./common";
 
 const provinceJsonData = fs.readFileSync('../data/ne_10m_admin_1_states_provinces.json', {encoding: 'utf-8'});
 const provinceGeoJson = JSON.parse(provinceJsonData);
@@ -22,6 +23,11 @@ interface PointProvince {
     x: number;
     y: number;
     provinces: ProvinceInfo[];
+}
+
+interface ProvinceLocation {
+    province: ProvinceInfo;
+    locations: Location[];
 }
 
 function polygonAvgPoint(polygonPoints: any[], provinceInfo: ProvinceInfo, step: number): PointProvince {
@@ -161,3 +167,18 @@ dot1x4MapData.forEach((point)=>{
 });
 const svgContent1x4 = draw1x4.svg();
 fs.writeFileSync('../data/ne_10m_admin_1_states_provinces_1_2x2.svg', svgContent1x4);
+
+const provinceLocation2: {[key: string]: ProvinceLocation} = {};
+dot1x4MapData.forEach((point: PointProvince)=>{
+    point.provinces.forEach((pi: ProvinceInfo)=>{
+        if(pi.adm1_code in provinceLocation2) {
+            provinceLocation2[pi.adm1_code].locations.push({x: point.x, y: point.y});
+        } else {
+            provinceLocation2[pi.adm1_code] = {
+                province: pi,
+                locations: [{x: point.x, y: point.y}]
+            };
+        }
+    });
+});
+fs.writeFileSync('../data/ne_10m_admin_1_states_provinces_1_2x2_locations.json', JSON.stringify(Object.values(provinceLocation2), null, 4));

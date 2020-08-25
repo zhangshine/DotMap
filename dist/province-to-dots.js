@@ -136,3 +136,18 @@ dot1x4MapData.forEach(function (point) {
 });
 var svgContent1x4 = draw1x4.svg();
 fs_1.default.writeFileSync('../data/ne_10m_admin_1_states_provinces_1_2x2.svg', svgContent1x4);
+var provinceLocation2 = {};
+dot1x4MapData.forEach(function (point) {
+    point.provinces.forEach(function (pi) {
+        if (pi.adm1_code in provinceLocation2) {
+            provinceLocation2[pi.adm1_code].locations.push({ x: point.x, y: point.y });
+        }
+        else {
+            provinceLocation2[pi.adm1_code] = {
+                province: pi,
+                locations: [{ x: point.x, y: point.y }]
+            };
+        }
+    });
+});
+fs_1.default.writeFileSync('../data/ne_10m_admin_1_states_provinces_1_2x2_locations.json', JSON.stringify(Object.values(provinceLocation2), null, 4));
