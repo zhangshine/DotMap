@@ -17,7 +17,7 @@ var result = placeGeoJson.features.map(function (placeInfo) {
     return {
         name: name,
         name_ascii: name_ascii,
-        location: roundPoint(x, y, 1)
+        location: [roundPoint(x, y, 1)]
     };
 });
 fs_1.default.writeFileSync('../data/ne_10m_populated_places_location_1x1.json', JSON.stringify(result, null, 4));
@@ -26,7 +26,7 @@ var result2 = placeGeoJson.features.map(function (placeInfo) {
     return {
         name: name,
         name_ascii: name_ascii,
-        location: roundPoint(x, y, 2)
+        location: [roundPoint(x, y, 2)]
     };
 });
 fs_1.default.writeFileSync('../data/ne_10m_populated_places_location_2x2.json', JSON.stringify(result2, null, 4));

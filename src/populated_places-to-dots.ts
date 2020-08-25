@@ -15,7 +15,7 @@ const placeGeoJson = JSON.parse(jsonData);
 interface PlaceLocation {
     name: string;
     name_ascii: string;
-    location: Location;
+    location: Location[];
 }
 
 function roundPoint(x: number, y: number, step: number): {x: number, y: number} {
@@ -30,7 +30,7 @@ const result: PlaceLocation[] = placeGeoJson.features.map((placeInfo: any)=>{
     return {
         name,
         name_ascii,
-        location: roundPoint(x, y, 1)
+        location: [roundPoint(x, y, 1)]
     }
 });
 
@@ -41,7 +41,7 @@ const result2: PlaceLocation[] = placeGeoJson.features.map((placeInfo: any)=>{
     return {
         name,
         name_ascii,
-        location: roundPoint(x, y, 2)
+        location: [roundPoint(x, y, 2)]
     }
 });
 
