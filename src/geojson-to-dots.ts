@@ -6,6 +6,7 @@ import {createSVGWindow} from "svgdom";
 import { SVG, registerWindow } from '@svgdotjs/svg.js'
 
 import fs from "fs";
+import {Location} from "./common";
 
 const jsonData = fs.readFileSync('../data/ne_10m_admin_0_countries.json', {encoding: 'utf-8'});
 
@@ -14,7 +15,7 @@ const geojson = JSON.parse(jsonData);
 
 const allCountryMap: {[key:string]: number} = {};
 geojson.features.map((value: any)=>{
-    allCountryMap[value.properties.SOVEREIGNT] = 1;
+    allCountryMap[value.properties.NAME] = 1;
 });
 
 const glookup = new GeoJsonGeometriesLookup(geojson);
@@ -69,7 +70,7 @@ function calculateDotData(step: number): PointCountries[]{
             const containerResult = glookup.getContainers({type: "Point", coordinates: [x, y]});
             if(containerResult.features.length > 0) {
                 const country = containerResult.features.map((value: any, index: number)=>{
-                    return value.properties.SOVEREIGNT
+                    return value.properties.NAME
                 });
                 countryMap[country[0]] = 1;
                 if('Antarctica' === country[0])
@@ -85,7 +86,7 @@ function calculateDotData(step: number): PointCountries[]{
     });
 
     geojson.features.forEach((countryInfo: any)=>{
-        const countryName = countryInfo.properties.SOVEREIGNT;
+        const countryName = countryInfo.properties.NAME;
         if(missingCountry.indexOf(countryName) !== -1) {
             if(countryInfo.geometry.type === 'Polygon') {
                 const polygonPoints: any[] = countryInfo.geometry.coordinates[0];
@@ -123,7 +124,7 @@ function calculateDotData(step: number): PointCountries[]{
     return result;
 }
 
-const dot1x1MapData = calculateDotData(1);
+const dot1x1MapData: PointCountries[] = calculateDotData(1);
 
 const draw1x1 = SVG().size(360, 150);
 dot1x1MapData.forEach((point)=>{
@@ -133,6 +134,20 @@ const svgContent1x1 = draw1x1.svg();
 
 fs.writeFileSync('../data/ne_10m_admin_0_countries_1_1x1.svg', svgContent1x1);
 fs.writeFileSync('../data/ne_10m_admin_0_countries_1_1x1.json', JSON.stringify(dot1x1MapData, null, 4));
+
+const placeLocations: {[key: string]: Location[]} = {};
+dot1x1MapData.forEach((point: PointCountries)=>{
+    const location = {x: point.x, y: point.y};
+
+    point.country.forEach((countryName)=>{
+        if(countryName in placeLocations) {
+            placeLocations[countryName].push(location);
+        } else {
+            placeLocations[countryName] = [location];
+        }
+    });
+});
+fs.writeFileSync('../data/ne_10m_admin_0_countries_1_1x1_country_locations.json', JSON.stringify(placeLocations, null, 4));
 
 const dot1x4MapData = calculateDotData(2);
 
@@ -144,3 +159,17 @@ const svgContent1x4 = draw1x4.svg();
 
 fs.writeFileSync('../data/ne_10m_admin_0_countries_1_2x2.svg', svgContent1x4);
 fs.writeFileSync('../data/ne_10m_admin_0_countries_1_2x2.json', JSON.stringify(dot1x4MapData, null, 4));
+
+const placeLocations2: {[key: string]: Location[]} = {};
+dot1x4MapData.forEach((point: PointCountries)=>{
+    const location = {x: point.x, y: point.y};
+
+    point.country.forEach((countryName)=>{
+        if(countryName in placeLocations2) {
+            placeLocations2[countryName].push(location);
+        } else {
+            placeLocations2[countryName] = [location];
+        }
+    });
+});
+fs.writeFileSync('../data/ne_10m_admin_0_countries_1_2x2_country_locations.json', JSON.stringify(placeLocations2, null, 4));

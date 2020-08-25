@@ -14,7 +14,7 @@ var jsonData = fs_1.default.readFileSync('../data/ne_10m_admin_0_countries.json'
 var geojson = JSON.parse(jsonData);
 var allCountryMap = {};
 geojson.features.map(function (value) {
-    allCountryMap[value.properties.SOVEREIGNT] = 1;
+    allCountryMap[value.properties.NAME] = 1;
 });
 var glookup = new geojson_geometries_lookup_1.default(geojson);
 var window = svgdom_1.createSVGWindow();
@@ -48,7 +48,7 @@ function calculateDotData(step) {
             var containerResult = glookup.getContainers({ type: "Point", coordinates: [x, y] });
             if (containerResult.features.length > 0) {
                 var country = containerResult.features.map(function (value, index) {
-                    return value.properties.SOVEREIGNT;
+                    return value.properties.NAME;
                 });
                 countryMap[country[0]] = 1;
                 if ('Antarctica' === country[0])
@@ -62,7 +62,7 @@ function calculateDotData(step) {
             missingCountry.push(countryName);
     });
     geojson.features.forEach(function (countryInfo) {
-        var countryName = countryInfo.properties.SOVEREIGNT;
+        var countryName = countryInfo.properties.NAME;
         if (missingCountry.indexOf(countryName) !== -1) {
             if (countryInfo.geometry.type === 'Polygon') {
                 var polygonPoints = countryInfo.geometry.coordinates[0];
@@ -105,6 +105,19 @@ dot1x1MapData.forEach(function (point) {
 var svgContent1x1 = draw1x1.svg();
 fs_1.default.writeFileSync('../data/ne_10m_admin_0_countries_1_1x1.svg', svgContent1x1);
 fs_1.default.writeFileSync('../data/ne_10m_admin_0_countries_1_1x1.json', JSON.stringify(dot1x1MapData, null, 4));
+var placeLocations = {};
+dot1x1MapData.forEach(function (point) {
+    var location = { x: point.x, y: point.y };
+    point.country.forEach(function (countryName) {
+        if (countryName in placeLocations) {
+            placeLocations[countryName].push(location);
+        }
+        else {
+            placeLocations[countryName] = [location];
+        }
+    });
+});
+fs_1.default.writeFileSync('../data/ne_10m_admin_0_countries_1_1x1_country_locations.json', JSON.stringify(placeLocations, null, 4));
 var dot1x4MapData = calculateDotData(2);
 var draw1x4 = svg_js_1.SVG().size(360, 150);
 dot1x4MapData.forEach(function (point) {
@@ -113,3 +126,16 @@ dot1x4MapData.forEach(function (point) {
 var svgContent1x4 = draw1x4.svg();
 fs_1.default.writeFileSync('../data/ne_10m_admin_0_countries_1_2x2.svg', svgContent1x4);
 fs_1.default.writeFileSync('../data/ne_10m_admin_0_countries_1_2x2.json', JSON.stringify(dot1x4MapData, null, 4));
+var placeLocations2 = {};
+dot1x4MapData.forEach(function (point) {
+    var location = { x: point.x, y: point.y };
+    point.country.forEach(function (countryName) {
+        if (countryName in placeLocations2) {
+            placeLocations2[countryName].push(location);
+        }
+        else {
+            placeLocations2[countryName] = [location];
+        }
+    });
+});
+fs_1.default.writeFileSync('../data/ne_10m_admin_0_countries_1_2x2_country_locations.json', JSON.stringify(placeLocations2, null, 4));
