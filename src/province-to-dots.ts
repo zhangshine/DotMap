@@ -3,7 +3,7 @@ import GeoJsonGeometriesLookup from "geojson-geometries-lookup";
 // @ts-ignore
 import {createSVGWindow} from "svgdom";
 // @ts-ignore
-import { SVG, registerWindow } from '@svgdotjs/svg.js'
+import {registerWindow, SVG} from '@svgdotjs/svg.js'
 
 import fs from "fs";
 
@@ -15,7 +15,7 @@ interface ProvinceInfo {
     adm1_code: string;
     name: string;
     name_local: string;
-    woe_label: string;
+    label: string;
 }
 
 interface PointProvince {
@@ -54,6 +54,16 @@ function appendIfNotExists(point: PointProvince, target: PointProvince[]) {
     target.push(point);
 }
 
+function extractProvinceInfo(properties: any): ProvinceInfo {
+    const {adm1_code, name, name_local, woe_label, admin} = properties;
+    return {
+        adm1_code,
+        name,
+        name_local,
+        label: woe_label ? woe_label : admin
+    };
+}
+
 function calculateProvinceDotData(step: number) {
     const adm1CodeMap: {[key: string]: number} = {},
         result: PointProvince[] = [],
@@ -66,8 +76,7 @@ function calculateProvinceDotData(step: number) {
                 continue;
 
             let provinces: ProvinceInfo[] = containerResult.features.map((provinceInfo: any): ProvinceInfo=>{
-                const {adm1_code, name, name_local, woe_label} = provinceInfo.properties;
-                return {adm1_code, name, name_local, woe_label}
+                return extractProvinceInfo(provinceInfo.properties);
             });
 
             provinces = provinces.filter((provinceInfo: ProvinceInfo)=>provinceInfo.name !== 'Antarctica');
@@ -86,16 +95,15 @@ function calculateProvinceDotData(step: number) {
     }
 
     provinceGeoJson.features.forEach((provinceInfo: any)=>{
-        const {adm1_code, name, name_local, woe_label} = provinceInfo.properties;
-        if(name === 'Antarctica')
+        const pi = extractProvinceInfo(provinceInfo.properties);
+        if(pi.name === 'Antarctica')
             return;
 
-        if (adm1CodeMap[adm1_code]) {
+        if (adm1CodeMap[pi.adm1_code]) {
             return;
         }
 
         const {type, coordinates} = provinceInfo.geometry;
-        const pi = {adm1_code, name, name_local, woe_label};
         if(type === 'Polygon') {
             const polygonPoints: any[] = coordinates[0];
             appendIfNotExists(polygonAvgPoint(polygonPoints, pi, step), missingProvincePoint);

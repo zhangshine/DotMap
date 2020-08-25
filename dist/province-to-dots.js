@@ -45,6 +45,15 @@ function appendIfNotExists(point, target) {
     }
     target.push(point);
 }
+function extractProvinceInfo(properties) {
+    var adm1_code = properties.adm1_code, name = properties.name, name_local = properties.name_local, woe_label = properties.woe_label, admin = properties.admin;
+    return {
+        adm1_code: adm1_code,
+        name: name,
+        name_local: name_local,
+        label: woe_label ? woe_label : admin
+    };
+}
 function calculateProvinceDotData(step) {
     var adm1CodeMap = {}, result = [], missingProvincePoint = [];
     for (var x = -180; x < 180; x += step) {
@@ -53,8 +62,7 @@ function calculateProvinceDotData(step) {
             if (containerResult.features.length <= 0)
                 continue;
             var provinces = containerResult.features.map(function (provinceInfo) {
-                var _a = provinceInfo.properties, adm1_code = _a.adm1_code, name = _a.name, name_local = _a.name_local, woe_label = _a.woe_label;
-                return { adm1_code: adm1_code, name: name, name_local: name_local, woe_label: woe_label };
+                return extractProvinceInfo(provinceInfo.properties);
             });
             provinces = provinces.filter(function (provinceInfo) { return provinceInfo.name !== 'Antarctica'; });
             if (provinces.length <= 0)
@@ -68,14 +76,13 @@ function calculateProvinceDotData(step) {
         }
     }
     provinceGeoJson.features.forEach(function (provinceInfo) {
-        var _a = provinceInfo.properties, adm1_code = _a.adm1_code, name = _a.name, name_local = _a.name_local, woe_label = _a.woe_label;
-        if (name === 'Antarctica')
+        var pi = extractProvinceInfo(provinceInfo.properties);
+        if (pi.name === 'Antarctica')
             return;
-        if (adm1CodeMap[adm1_code]) {
+        if (adm1CodeMap[pi.adm1_code]) {
             return;
         }
-        var _b = provinceInfo.geometry, type = _b.type, coordinates = _b.coordinates;
-        var pi = { adm1_code: adm1_code, name: name, name_local: name_local, woe_label: woe_label };
+        var _a = provinceInfo.geometry, type = _a.type, coordinates = _a.coordinates;
         if (type === 'Polygon') {
             var polygonPoints = coordinates[0];
             appendIfNotExists(polygonAvgPoint(polygonPoints, pi, step), missingProvincePoint);
