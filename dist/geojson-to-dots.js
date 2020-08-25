@@ -83,11 +83,8 @@ function calculateDotData(step) {
             if (pc.x === point.x && pc.y === point.y) {
                 if (pc.country.indexOf(point.countryName) === -1) {
                     pc.country.push(point.countryName);
-                    found = true;
                 }
-                else {
-                    found = true;
-                }
+                found = true;
             }
         }
         if (!found) {

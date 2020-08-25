@@ -98,7 +98,7 @@ function calculateDotData(step: number): PointCountries[]{
         }
     });
 
-// add/merge mission country point
+    // add/merge mission country point
     missingCountryPoint.forEach((point: CountryPoint)=>{
         let found = false;
         for(let i=0; i<result.length; i++) {
@@ -106,10 +106,8 @@ function calculateDotData(step: number): PointCountries[]{
             if(pc.x === point.x && pc.y === point.y) {
                 if(pc.country.indexOf(point.countryName) === -1) {
                     pc.country.push(point.countryName);
-                    found = true;
-                } else {
-                    found = true;
                 }
+                found = true;
             }
         }
 
